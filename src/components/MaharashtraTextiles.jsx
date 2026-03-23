@@ -364,24 +364,24 @@ function AboutAndSidebar() {
                     in place several policy initiatives to help its beneficiaries remain competitive in the global market.
                 </p>
             </div>
-            <div className="w-full lg:w-[520px] shrink-0">
+            <div className="w-full lg:w-[480px] shrink-0">
                 <TabsWidget />
-                <div className="flex gap-4 mt-7">
+                <div className="flex gap-3 mt-7">
                     <a
                         href="#"
-                        className="flex-1 py-4 text-center text-sm font-bold rounded bg-[#0d1b4a] text-white hover:-translate-y-0.5 hover:shadow-lg transition-all"
+                        className="flex-1 py-4 text-center text-xs font-bold rounded bg-[#0d1b4a] text-white hover:-translate-y-0.5 hover:shadow-lg transition-all whitespace-nowrap"
                     >
                         Policy Space
                     </a>
                     <a
                         href="#"
-                        className="flex-1 py-4 text-center text-sm font-bold rounded bg-[#1a2a6c] text-white hover:-translate-y-0.5 hover:shadow-lg transition-all"
+                        className="flex-1 py-4 text-center text-xs font-bold rounded bg-[#1a2a6c] text-white hover:-translate-y-0.5 hover:shadow-lg transition-all whitespace-nowrap"
                     >
                         Investor Space
                     </a>
                     <a
                         href="#"
-                        className="flex-1 py-4 text-center text-sm font-bold rounded bg-amber-500 text-gray-900 hover:-translate-y-0.5 hover:shadow-lg transition-all"
+                        className="flex-1 py-4 text-center text-xs font-bold rounded bg-amber-500 text-gray-900 hover:-translate-y-0.5 hover:shadow-lg transition-all whitespace-nowrap"
                     >
                         Upcoming Events
                     </a>
@@ -403,49 +403,51 @@ const galleryColors = [
 
 function DocumentsAndLinks() {
     return (
-        <div className="flex flex-col lg:flex-row">
-            {/* Documents */}
-            <div className="flex-1 bg-[#0d1b4a] px-8 py-10 text-white">
-                <h2 className="text-xl font-extrabold mb-5 uppercase tracking-wider">Documents</h2>
-                {documents.map((doc, i) => (
-                    <div
-                        key={i}
-                        className="flex items-start gap-2.5 py-2.5 border-b border-white/10 text-sm text-white/85 cursor-pointer hover:text-amber-500 transition-colors"
-                    >
-                        <span className="text-amber-500 text-xl leading-none shrink-0">•</span>
-                        {doc}
-                    </div>
-                ))}
-                <button className="mt-4 px-5 py-2 bg-amber-500 text-gray-900 font-bold text-sm rounded border-none cursor-pointer">
-                    View All
-                </button>
-            </div>
+        <div className="bg-[#0d1b4a]">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
+                {/* Documents */}
+                <div className="lg:w-[40%] shrink-0 px-10 py-10 text-white">
+                    <h2 className="text-xl font-extrabold mb-6 uppercase tracking-wider">Documents</h2>
+                    {documents.map((doc, i) => (
+                        <div
+                            key={i}
+                            className="flex items-start gap-3 py-3 border-b border-white/10 last:border-b-0 text-sm text-white/85 cursor-pointer hover:text-amber-400 transition-colors"
+                        >
+                            <span className="text-amber-400 text-lg leading-none shrink-0 mt-0.5">•</span>
+                            <span>{doc}</span>
+                        </div>
+                    ))}
+                    <button className="mt-5 px-6 py-2.5 bg-amber-500 text-gray-900 font-bold text-sm rounded border-none cursor-pointer hover:bg-amber-400 transition-colors">
+                        View All
+                    </button>
+                </div>
 
-            {/* Important Links */}
-            <div className="flex-1 bg-white px-8 py-10 border-l border-gray-200">
-                <h2 className="text-xl font-extrabold text-gray-900 mb-5">Important Links</h2>
-                <div className="flex flex-col md:flex-row gap-8">
-                    <div className="flex-1">
-                        {linksLeft.map((link, i) => (
-                            <div
-                                key={i}
-                                className="flex items-start gap-2 py-2 text-sm text-gray-900 cursor-pointer hover:text-[#1a2a6c] transition-colors"
-                            >
-                                <span className="text-[#1a2a6c] text-[8px] mt-1.5 shrink-0">■</span>
-                                {link}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex-1">
-                        {linksRight.map((link, i) => (
-                            <div
-                                key={i}
-                                className="flex items-start gap-2 py-2 text-sm text-gray-900 cursor-pointer hover:text-[#1a2a6c] transition-colors"
-                            >
-                                <span className="text-[#1a2a6c] text-[8px] mt-1.5 shrink-0">■</span>
-                                {link}
-                            </div>
-                        ))}
+                {/* Important Links */}
+                <div className="flex-1 bg-white px-10 py-10">
+                    <h2 className="text-xl font-extrabold text-gray-900 mb-6">Important Links</h2>
+                    <div className="flex flex-col md:flex-row gap-8">
+                        <div className="flex-1 min-w-0">
+                            {linksLeft.map((link, i) => (
+                                <div
+                                    key={i}
+                                    className="flex items-start gap-2.5 py-2.5 text-sm text-gray-700 cursor-pointer hover:text-[#1a2a6c] transition-colors"
+                                >
+                                    <span className="text-[#1a2a6c] text-[8px] mt-1.5 shrink-0">■</span>
+                                    <span>{link}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            {linksRight.map((link, i) => (
+                                <div
+                                    key={i}
+                                    className="flex items-start gap-2.5 py-2.5 text-sm text-gray-700 cursor-pointer hover:text-[#1a2a6c] transition-colors"
+                                >
+                                    <span className="text-[#1a2a6c] text-[8px] mt-1.5 shrink-0">■</span>
+                                    <span>{link}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -474,7 +476,7 @@ function SocialFollow() {
     return (
         <div className="px-8 py-8 bg-white">
             <h3 className="text-lg font-bold text-gray-900 mb-4">Follow us on:</h3>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex gap-3">
                 <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white font-bold text-base cursor-pointer hover:scale-110 transition-transform">
                     𝕏
                 </div>
